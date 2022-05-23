@@ -13,10 +13,8 @@
 }
 
 body {
-  background-image: url(/images/pattern-background-desktop.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("./images/pattern-background-desktop.svg") center/cover
+    no-repeat;
   background-color: var(--pale-blue);
   height: 25em;
   font-family: "Red Hat Display", sans-serif;
@@ -26,18 +24,18 @@ body {
 }
 
 .card {
+  border-radius: 16px;
+  width: 400px;
+  height: 580px;
+  background-color: hsl(225, 100%, 98%);
+  text-align: center;
+  margin: 100px auto;
   position: absolute;
   left: 0;
   right: 0;
-  top: 10em;
+  top: 0;
   bottom: 0;
   z-index: 1;
-  border-radius: 16px;
-  width: 400px;
-  height: 620px;
-  background-color: hsl(225, 100%, 98%);
-  text-align: center;
-  margin: 3em auto;
 }
 
 h1 {
@@ -84,7 +82,7 @@ h1 {
 .btn-primary {
   background-color: var(--bright-blue);
   color: var(--pale-blue);
-  margin: 1em 0 2em 0;
+  margin: 1em 0 1em 0;
 }
 
 .btn-primary:hover,
@@ -132,19 +130,19 @@ p {
 footer {
   font-size: 11px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -75px;
   width: 100%;
-  margin-top: 9em;
+  z-index: 1;
 }
 
 footer a {
-  color: var(--dark-blue) ß;
+  color: var(--dark-blue);
 }
 
 @media (max-width: 768px) {
   body {
-    background-image: url(/images/pattern-background-mobile.svg);
+    background-image: url("./images/pattern-background-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,14 +156,18 @@ footer a {
     position: absolute;
     left: 0;
     right: 0;
-    top: 10em;
+    top: 2.5em;
     bottom: 0;
     z-index: 1;
     border-radius: 16px;
     width: 350px;
-    height: 500px;
+    height: 580px;
     background-color: hsl(225, 100%, 98%);
     text-align: center;
     margin: 0 auto;
+  }
+
+  footer {
+    bottom: -5px;
   }
 }
